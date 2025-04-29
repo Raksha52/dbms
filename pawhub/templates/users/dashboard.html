@@ -1,0 +1,51 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Dashboard - PawHub{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4">Dashboard</h1>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">My Profile</h5>
+                    <p class="card-text">View and update your profile information.</p>
+                    <a href="{% url 'users:profile' %}" class="btn btn-primary">Go to Profile</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">My Pets</h5>
+                    <p class="card-text">Manage your pets and view their details.</p>
+                    <a href="{% url 'pets:pet_list' %}" class="btn btn-primary">View Pets</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Pet Supplies</h5>
+                    <p class="card-text">Browse and manage your marketplace listings.</p>
+                    <a href="{% url 'marketplace:list' %}" class="btn btn-primary">View Supplies</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Pet Marketplace</h5>
+                    <p class="card-text">Buy and sell pets in our marketplace.</p>
+                    <a href="{% url 'marketplace:pet_listing_list' %}" class="btn btn-primary">View Pets for Sale</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
